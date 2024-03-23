@@ -1,13 +1,13 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
-import AdminPanel from '../Panel/Admin/adminPanel'
+
+
+import Navbar from './Navbar'
+
 
 const Home = () => {
     return (
         <div>
-            {/* <Navbar /> */}
-            <AdminPanel />
-
+            <Navbar />
         </div>
     )
 }

@@ -40,7 +40,7 @@ const Register = () => {
 
             <div className=' flex items-center justify-center w-full h-screen'>
 
-                <div className=' flex items-center text-white flex-col w-72 h-[420px] bg-slate-700 py-3 px-5 rounded md:w-96 md:h-2/3'>
+                <div className=' flex items-center text-white flex-col w-80 h-[450px] bg-slate-700 py-3 px-5 rounded md:w-96 md:h-2/3'>
 
                     <h1 className=' text-3xl font-bold mt-4 border-b-2 border-white px-2 py-1  md:text-3xl'  >Register</h1>
 
