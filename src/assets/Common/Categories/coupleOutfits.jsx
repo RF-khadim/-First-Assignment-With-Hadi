@@ -266,7 +266,7 @@ const CoupleOutfits = () => {
   const handleClick = (item) => {
     setPopUp(item);
   };
-  
+
   return (
     <div>
       <Navbar />
@@ -287,11 +287,11 @@ const CoupleOutfits = () => {
       <div className=" w-full h-full grid grid-cols-1 mt-10 lg:grid-cols-4 text-center md:grid-cols-2 sm:grid-cols-1">
         {CoupleItems.map((item, index) => (
           <div
-            key={index}
+            key={index} item={item}
             onClick={() => handleClick(item)}
             className=" shadow-lg bg-slate-900 w-80 rounded-md mx-auto my-10"
           >
-            <MenShirtCard item={item} handleClick={handleClick} popUp={popUp}  />
+            <MenShirtCard item={item} handleClick={handleClick} popUp={popUp} />
           </div>
         ))}
 

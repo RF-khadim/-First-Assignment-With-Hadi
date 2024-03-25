@@ -14,6 +14,8 @@ import Women from './assets/Common/Categories/women'
 import NewPassword from './assets/Common/newPassword'
 import store from './assets/store/store'
 import { Provider } from 'react-redux'
+import AdminPanel from './assets/Panel/Admin/adminPanel'
+import AddProduct from './assets/Panel/Admin/Dashboard/addProduct'
 
 
 
@@ -38,7 +40,9 @@ function App() {
           <Route path='/men' element={<Men />} />
           <Route path='/headphones' element={<Headphones />} />
           <Route path='/caps' element={<Caps />} />
+          <Route path='/addProduct' element={<AddProduct />} />
           <Route path='/googles' element={<Googles />} />
+          <Route path='/adminPanel' element={<AdminPanel />} />
         </Routes>
       </Provider>
     </>

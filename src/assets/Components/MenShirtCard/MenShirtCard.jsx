@@ -1,9 +1,13 @@
 import React from 'react'
-
-
+import { useDispatch } from 'react-redux'
+import {  addToCart } from '../../store/cartslice'
 
 
 const MenShirtCard = ({ item, handleClick }) => {
+    const dispatch = useDispatch()
+    const handleAdd = (item) => {
+        dispatch(addToCart(item));
+    };
 
 
     return (
@@ -26,7 +30,7 @@ const MenShirtCard = ({ item, handleClick }) => {
                     <p className=' pb-2 font-bold'>Get {item.discount}% Discount</p>
                 </div>
 
-                <button className='bg-white h-8 mt-[6px] text-black px-10 py-0 rounded-md hover:bg-slate-800  hover:ring-white hover:ring-2 hover:text-white  duration-300 font-bold '> Add</button>
+                <button onClick={() => handleAdd(item)} className='bg-white h-8 mt-[6px] text-black px-10 py-0 rounded-md hover:bg-slate-800  hover:ring-white hover:ring-2 hover:text-white  duration-300 font-bold '> Add</button>
 
             </div>
 
