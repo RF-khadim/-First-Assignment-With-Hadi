@@ -15,7 +15,14 @@ import NewPassword from './assets/Common/newPassword'
 import store from './assets/store/store'
 import { Provider } from 'react-redux'
 import AdminPanel from './assets/Panel/Admin/adminPanel'
-import AddProduct from './assets/Panel/Admin/Dashboard/addProduct'
+import AdminProduct from './assets/Panel/Admin/Dashboard/AdminPages/adminProduct'
+import Activity from './assets/Panel/Admin/Dashboard/AdminPages/activity'
+import Orders from './assets/Panel/Admin/Dashboard/AdminPages/orders'
+import Logout from './assets/Panel/Admin/Dashboard/AdminPages/logout'
+import Users from './assets/Panel/Admin/Dashboard/AdminPages/users'
+import Setting from './assets/Panel/Admin/Dashboard/AdminPages/setting'
+import Transactions from './assets/Panel/Admin/Dashboard/AdminPages/transactions'
+import Dashboard from './assets/Panel/Admin/Dashboard/AdminPages/dashboard'
 
 
 
@@ -40,9 +47,19 @@ function App() {
           <Route path='/men' element={<Men />} />
           <Route path='/headphones' element={<Headphones />} />
           <Route path='/caps' element={<Caps />} />
-          <Route path='/addProduct' element={<AddProduct />} />
           <Route path='/googles' element={<Googles />} />
           <Route path='/adminPanel' element={<AdminPanel />} />
+          <Route path='/adminproduct' element={<AdminProduct />} />
+          <Route path='/orders' element={<Orders />} />
+          <Route path='/activity' element={<Activity />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='/setting' element={<Setting />} />
+          <Route path='/logout' element={<Logout />} />
+          <Route path='/transactions' element={<Transactions />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+
+          
+
         </Routes>
       </Provider>
     </>

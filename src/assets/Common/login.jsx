@@ -44,7 +44,7 @@ const Login = () => {
                     <p className='text-sm mt-2 p-3 md:text-base  md:mt-8'>Forgot password? <Link to='/recovery' className='border-b-2
                         py-1 border-gray-300'> Click here</Link> </p>
 
-                    <button type='submit' className=' bg-slate-950 w-40 py-2 rounded-full mt-4 md:w-64 md:mt-4'>Login</button>
+                    <button type='submit' className=' bg-slate-950 w-40 py-2 rounded-full mt-4 md:w-64 md:mt-4 hover:bg-white hover:text-black duration-300 transition-all'>Login</button>
 
                     <p className='text-sm mt-2 p-3 md:text-base md:mt-2'>New here?
                         <Link to='/register' className='border-b-2

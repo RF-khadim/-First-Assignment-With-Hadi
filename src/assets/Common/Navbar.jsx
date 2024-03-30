@@ -6,8 +6,6 @@ import { ImHeadphones } from "react-icons/im";
 import { IoGlasses } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
-import Cart from './cart';
-
 
 const NavList = [
     {
@@ -124,13 +122,16 @@ const Navbar = () => {
                             <span className={"py-1   " + (active === index ? "" : "text-white")}>{item.name}</span>
 
 
+
+
+
                         </div>
 
 
                     ))}
 
                     <div>
-                        <Link className='py-2 text-white text-lg font-medium w-full mt-6 pl-4 flex gap-3 hover:ring-1 ring-white rounded-md' to="/caps"> <PiBaseballCapBold size={21} className='mt-1 ' /> Caps</Link>
+                        <Link className='py-2 text-white text-lg font-medium w-full mt-6 pl-4 flex gap-3 hover:ring-1 ring-white rounded-md' to="/caps?category='caps'"> <PiBaseballCapBold size={21} className='mt-1 ' /> Caps</Link>
 
                         <Link className='py-2 text-white text-lg font-medium w-full mt-6 pl-4 flex gap-3 hover:ring-1 ring-white rounded-md' to="/headphones" ><ImHeadphones size={22} className='mt-1 ' />Headphones</Link>
 
@@ -138,7 +139,7 @@ const Navbar = () => {
                         <Link className='py-2 text-white text-lg font-medium w-full mt-6 pl-4 flex gap-3 hover:ring-1 ring-white rounded-md' to="/googles" >
                             <IoGlasses size={26} className='mt-1' />  Googles</Link>
 
-                            <Link className='py-2 text-white text-lg font-medium w-full mt-6 pl-4 flex gap-3 hover:ring-1 ring-white rounded-md'  to="/cart" ><AiOutlineShoppingCart size={22} className='mt-1 ' />Cart</Link>
+                        <Link className='py-2 text-white text-lg font-medium w-full mt-6 pl-4 flex gap-3 hover:ring-1 ring-white rounded-md' to="/cart" ><AiOutlineShoppingCart size={22} className='mt-1 ' />Cart</Link>
 
                     </div>
 

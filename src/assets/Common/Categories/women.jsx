@@ -1,172 +1,17 @@
 import React, { useState } from 'react'
 import Navbar from '../Navbar'
 import WomenGroup from './WomenShirts/WomenGroup.jpg'
-import WomenShirt1 from './WomenShirts/WomenShirt.1.jpg'
-import WomenShirt2 from './WomenShirts/WomenShirt.2.jpg'
-import WomenShirt3 from './WomenShirts/WomenShirt.3.jpg'
-import WomenShirt4 from './WomenShirts/WomenShirt.4.jpg'
-import WomenShirt5 from './WomenShirts/WomenShirt.5.jpg'
-import WomenShirt6 from './WomenShirts/WomenShirt.6.jpg'
-import WomenShirt7 from './WomenShirts/WomenShirt.7.jpg'
-import WomenShirt8 from './WomenShirts/WomenShirt.8.jpg'
-import WomenShirt9 from './WomenShirts/WomenShirt.9.jpg'
-import WomenShirt10 from './WomenShirts/WomenShirt.10.jpg'
-import WomenShirt11 from './WomenShirts/WomenShirt.11.jpg'
-import WomenShirt12 from './WomenShirts/WomenShirt.12.jpg'
-import WomenShirt13 from './WomenShirts/WomenShirt.13.jpg'
-import WomenShirt14 from './WomenShirts/WomenShirt.14.jpg'
-import WomenShirt15 from './WomenShirts/WomenShirt.15.jpg'
-import WomenShirt16 from './WomenShirts/WomenShirt.16.jpg'
 import CardModal from '../../Components/CardModal/CardModal'
 import MenShirtCard from '../../Components/MenShirtCard/MenShirtCard'
-
-const ImgComp = ({ img }) => {
-  return (
-    <img className="object-fill w-full h-full" src={img} />
-  )
-}
-
-
-const WomenShirts = [
-  {
-    id: 1,
-    title: "Blue White Printed Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt1} />
-  },
-
-  {
-    id: 2,
-    title: "Multicolor Flowery Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt2} />
-  },
-
-  {
-    id: 3,
-    title: " Blue Rosy Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt3} />
-  },
-
-
-  {
-    id: 4,
-    title: " White Galaxy Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt4} />
-  },
-
-
-  {
-    id: 5,
-    title: "Teal Pink Roses Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt5} />
-  },
-
-
-  {
-    id: 6,
-    title: "Printed Anchor Colored Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt6} />
-  },
-
-  {
-    id: 7,
-    title: "Needle Worked Red Shirt ",
-    Price: 3600,
-    discount: 10,
-    image: <ImgComp img={WomenShirt7} />
-  },
-
-
-  {
-    id: 8,
-    title: "Carolina Pink Dotted Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt8} />
-  },
-
-
-  {
-    id: 9,
-    title: "Light Charcoal Leafy Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt9} />
-  },
-
-  {
-    id: 10,
-    title: "Salmon Multi Desined Print ",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt10} />
-  },
-
-
-  {
-    id: 11,
-    title: "MidNight Multi Flowery Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt11} />
-  },
-
-  {
-    id: 12,
-    title: "Green Check Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt12} />
-  },
-
-  {
-    id: 13,
-    title: "Black V-Collar Shirt",
-    Price: 3600,
-    discount: 10,
-    image: <ImgComp img={WomenShirt13} />
-  },
-
-  {
-    id: 14,
-    title: "Fern Ribbon Shirt",
-    Price: 3600,
-    discount: 10,
-    image: <ImgComp img={WomenShirt14} />
-  },
-
-  {
-    id: 15,
-    title: "Navy-Blue Printed Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt15} />
-  },
-
-  {
-    id: 16,
-    title: "Slate White Printed Shirt",
-    Price: 2700,
-    discount: 10,
-    image: <ImgComp img={WomenShirt16} />
-  },
+import Products from '../../Utils/constants'
 
 
 
-]
+
 
 const Women = () => {
+
+  const womenProducts = Products.filter(obj => obj.category === 'women')
 
   const [popUp, setPopUp] = useState("");
   const handleClick = (item) => {
@@ -191,7 +36,7 @@ const Women = () => {
 
       </div>
       <div className=" w-full h-full grid grid-cols-1 mt-10 lg:grid-cols-4 text-center md:grid-cols-2 sm:grid-cols-1">
-        {WomenShirts.map((item, index) => (
+        {womenProducts.map((item, index) => (
           <div
             key={index}
             onClick={() => handleClick(item)}
